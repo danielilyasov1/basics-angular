@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-show-time',
@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowTimeComponent implements OnInit {
 
-  constructor() { }
+  //emits:  
 
+  //props:
+  // @Input() testprop:number|null =null
+
+  constructor() {}
+
+  //data:
+  time = new Date(Date.now()).toLocaleTimeString()
+
+  //created:
   ngOnInit(): void {
+    setInterval(()=>{
+      this.time = new Date(Date.now()).toLocaleTimeString()
+    },1000)
+  }
+
+  //methods:
+
+  //computed(getters):
+  get timee(){
+    return this.time
   }
 
 }
