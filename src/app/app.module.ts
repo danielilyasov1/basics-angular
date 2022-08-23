@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app-root/app.component';
 import { ShowTimeComponent } from './cmps/show-time/show-time.component';
 import { CountDownComponent } from './cmps/count-down/count-down.component';
+import { ShowCoordsComponent } from './cmps/show-coords/show-coords.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowTimeComponent,
-    CountDownComponent
+    CountDownComponent,
+    ShowCoordsComponent
   ],
   imports: [
     BrowserModule,
