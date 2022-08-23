@@ -5,6 +5,7 @@
     <main>
         <!-- <app-show-time [testprop]="test"></app-show-time> -->
         <app-show-time></app-show-time>
+        <app-count-down (due)="playAudio()" [targetTime]="targetTime"></app-count-down>
     </main>
     <footer>
         © Created by Danielle Ilyasov 18.8.2022

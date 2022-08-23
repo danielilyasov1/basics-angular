@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-app';
   // test:number|null=55;
-  targetTime = Date.now() + 1000 * 13
+  targetTime = Date.now() + 1000 * 15
 
   playAudio() {
     let audio = new Audio('../../assets/sounds/ding.mp3')
