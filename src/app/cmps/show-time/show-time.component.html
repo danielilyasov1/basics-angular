@@ -1,9 +1,9 @@
-<section class="show-time" [class.dark]="isDark">
+<div class="show-time" [class.dark]="isDark">
         <h1>Show Time</h1>
         <!-- <h1>{{timee}}</h1> -->
-        <h1>{{time | date: 'h:mm:ss a'}}</h1>
-        <!-- <h1>{{testprop}}</h1> -->
+        <h2>{{time | date: 'h:mm:ss a'}}</h2>
         <img src="{{seasonImgUrl}}" alt="" srcset="">
+        <!-- <h1>{{testprop}}</h1> -->
 
         <button (click)="onToggleDarkMode()" >Click me</button>
-</section>
+</div>

@@ -1,9 +1,20 @@
 .main-app {
     margin: auto;
     text-align: center;
+    background-color: palevioletred;
     height: 95vh;
-
+    
+    header{
+        padding: 1px;
+    }
+    
     main {
         flex-grow: 1;
+    }
+    
+    footer{
+        position: fixed;
+        bottom: 0;
+        padding: 10px;
     }
 }
