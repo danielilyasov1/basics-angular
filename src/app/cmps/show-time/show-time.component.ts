@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-show-time',
@@ -16,7 +16,7 @@ export class ShowTimeComponent implements OnInit {
 
   //data:
   time = new Date()
-  isDark = false
+  isDark: boolean = false
 
   //created:
   ngOnInit(): void {
@@ -29,12 +29,17 @@ export class ShowTimeComponent implements OnInit {
   onToggleDarkMode = () => {
           this.isDark = !this.isDark
   }
+
   //computed(getters):
-  get season() {
+  get seasonImgUrl() {
       const seasons = ['winter', 'spring', 'summer', 'autumn']
       const currMonth = Math.floor((this.time.getMonth() / 12) * 4)
-      return seasons[currMonth]
+      let nowSeason = seasons[currMonth]
+      var imgUrl = `../../assets/img/${nowSeason}.png`
+
+      return imgUrl
   }
+
   get timee(){
     return new Date(Date.now()).toLocaleTimeString()
   }
